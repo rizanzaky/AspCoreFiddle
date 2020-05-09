@@ -1,0 +1,16 @@
+﻿@page
+@model CafeFurs.Web.Pages.Restaurants.ListModel
+@{
+}
+
+@Model.Message
+
+<table class="table">
+    @foreach (var restaurant in Model.Restaurants)
+    {
+    <tr>
+        <td>@restaurant.Name</td>
+        <td>@restaurant.Cousine</td>
+    </tr>
+    }
+</table>

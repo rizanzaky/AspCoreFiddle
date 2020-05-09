@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeFurs.Web", "CafeFurs\CafeFurs.Web\CafeFurs.Web.csproj", "{594ABBC4-BE3D-4B37-ADDE-A152604C49D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeFurz.Core", "CafeFurs\CafeFurz.Core\CafeFurz.Core.csproj", "{56E60C5F-72FE-4366-94F1-480CAA3434CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{594ABBC4-BE3D-4B37-ADDE-A152604C49D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{594ABBC4-BE3D-4B37-ADDE-A152604C49D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{594ABBC4-BE3D-4B37-ADDE-A152604C49D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E60C5F-72FE-4366-94F1-480CAA3434CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E60C5F-72FE-4366-94F1-480CAA3434CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E60C5F-72FE-4366-94F1-480CAA3434CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E60C5F-72FE-4366-94F1-480CAA3434CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
