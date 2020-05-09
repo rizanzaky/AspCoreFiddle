@@ -3,13 +3,23 @@
 @{
 }
 
-@Model.Message
+<h2>@Model.Message</h2>
+
+<form>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control" asp-for="SearchTerm" autocomplete="off" />
+            <button class="btn btn-md btn-outline-primary">Search</button>
+        </div>
+    </div>
+</form>
 
 <table class="table">
     @foreach (var restaurant in Model.Restaurants)
     {
     <tr>
         <td>@restaurant.Name</td>
+        <td>@restaurant.Location</td>
         <td>@restaurant.Cousine</td>
     </tr>
     }

@@ -29,7 +29,7 @@ namespace CafeFurz.Core.Services
                 return Restaurants;
             }
 
-            return Restaurants.Where(r => r.Name.Contains(name));
+            return Restaurants.Where(r => r.Name.ToLower().Contains(name.ToLower()));
         }
 
         public Restaurant GetRestaurantById(int restaurnatId)

@@ -15,7 +15,7 @@ namespace CafeFurs.Web.Pages.Restaurants
 
         public string Message { get; set; }
         public IEnumerable<Restaurant> Restaurants { get; set; }
-        [BindProperty]
+        [BindProperty(SupportsGet = true)]
         public string SearchTerm { get; set; }
 
         public ListModel(IRestaurantData restaurantData)
