@@ -3,12 +3,17 @@
 @{
 }
 
-<h2>@Model.Message</h2>
+<div class="d-flex flex-row justify-content-between">
+    <h2>@Model.Message</h2>
+    <a asp-page="./Update" class="btn btn-sm btn-success align-self-center">Add <i class="fa fa-plus"></i></a>
+</div>
+
+<br/>
 
 <form>
     <div class="form-group">
         <div class="input-group">
-            <input type="text" class="form-control" asp-for="SearchTerm" autocomplete="off" autofocus />
+            <input class="form-control" asp-for="SearchTerm" autocomplete="off" autofocus />
             <button class="btn btn-md btn-outline-primary">Search</button>
         </div>
     </div>
