@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CafeFurz.Core.Models;
+﻿using CafeFurz.Core.Models;
 using CafeFurz.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -11,22 +7,19 @@ namespace CafeFurs.Web.Pages.Restaurants
 {
     public class DetailModel : PageModel
     {
-        private readonly IRestaurantData restaurantData;
-
-        public Restaurant Restaurant { get; set; }
+        private readonly IRestaurantData _restaurantData;
 
         public DetailModel(IRestaurantData restaurantData)
         {
-            this.restaurantData = restaurantData;
+            _restaurantData = restaurantData;
         }
+
+        public Restaurant Restaurant { get; set; }
 
         public IActionResult OnGet(int restaurantId)
         {
-            Restaurant = restaurantData.GetRestaurantById(restaurantId);
-            if (Restaurant == null)
-            {
-                return RedirectToPage("NotFound");
-            }
+            Restaurant = _restaurantData.GetRestaurantById(restaurantId);
+            if (Restaurant == null) return RedirectToPage("NotFound");
 
             return Page();
         }
