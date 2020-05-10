@@ -21,6 +21,7 @@
         <td>@restaurant.Name</td>
         <td>@restaurant.Location</td>
         <td>@restaurant.Cousine</td>
+        <td><a asp-page="/Restaurants/Detail" asp-route-restaurantId="@restaurant.Id"><i class="fa fa-search-plus text-primary"></i></a></td>
     </tr>
     }
 </table>

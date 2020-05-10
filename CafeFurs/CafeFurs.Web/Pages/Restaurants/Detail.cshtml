@@ -1,0 +1,25 @@
+﻿@page
+@model CafeFurs.Web.Pages.Restaurants.DetailModel
+@{
+}
+
+<h2>@Model.Restaurant.Name</h2>
+<h5>#@Model.Restaurant.Id</h5>
+
+<hr />
+
+<div>
+    <i class="fa fa-utensils text-success"></i>
+    <span>@Model.Restaurant.Cousine</span>
+</div>
+
+<div>
+    <i class="fa fa-map-marker-alt text-info"></i>
+    <span>@Model.Restaurant.Location</span>
+</div>
+
+<hr />
+
+<div>
+    Back to <a asp-page="/Restaurants/List">All Restaurants</a>
+</div>

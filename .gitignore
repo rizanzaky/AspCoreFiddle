@@ -403,3 +403,6 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+# For projects
+/CafeFurs/CafeFurs.Web/wwwroot/lib/
