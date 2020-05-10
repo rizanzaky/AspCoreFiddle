@@ -1,31 +1,33 @@
-﻿@page
+﻿@page "{restaurantId:int?}"
 @model CafeFurs.Web.Pages.Restaurants.UpdateModel
 @{
 }
 
-<h2>Updating @Model.Restaurant</h2>
+<h2>@(Model.Restaurant.Id == 0 ? "Creating New Restaurant" : $"Updating {Model.Restaurant.Name}")</h2>
 
 <form method="POST">
+    <input asp-for="Restaurant.Id" type="hidden"/>
+    
     <div class="form-group row">
         <label asp-for="Restaurant.Name" class="col-sm-2 col-form-label">Name:</label>
         <div class="col-sm-10">
-            <input asp-for="Restaurant.Name" class="form-control" />
+            <input asp-for="Restaurant.Name" class="form-control"/>
         </div>
     </div>
-    
+
     <div class="form-group row">
         <label asp-for="Restaurant.Location" class="col-sm-2 col-form-label">Location:</label>
         <div class="col-sm-10">
-            <input asp-for="Restaurant.Location" class="form-control" />
+            <input asp-for="Restaurant.Location" class="form-control"/>
         </div>
     </div>
-    
+
     <div class="form-group row">
         <label asp-for="Restaurant.Cousine" class="col-sm-2 col-form-label">Cousine:</label>
         <div class="col-sm-10">
             <select asp-for="Restaurant.Cousine" asp-items="Model.Cousines" class="form-control"></select>
         </div>
     </div>
-    
+
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

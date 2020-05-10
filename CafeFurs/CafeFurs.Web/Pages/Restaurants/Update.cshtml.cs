@@ -21,8 +21,9 @@ namespace CafeFurs.Web.Pages.Restaurants
             _restaurantData = restaurantData;
         }
         
-        public void OnGet()
+        public void OnGet(int restaurantId)
         {
+            Restaurant = _restaurantData.GetRestaurantById(restaurantId) ?? new Restaurant();
         }
 
         public IActionResult OnPost(Restaurant restaurant)
