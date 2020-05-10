@@ -13,4 +13,10 @@
   <ItemGroup>
     <ProjectReference Include="..\CafeFurz.Core\CafeFurz.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Update="Pages\Restaurants\NotFound.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
