@@ -42,6 +42,7 @@ namespace CafeFurs.Web.Pages.Restaurants
                 Restaurant = _restaurantData.Update(restaurant);
             }
 
+            TempData["Message"] = "Saved the Restaurant successfully!";
             return RedirectToPage("./Detail", new { restaurantId = Restaurant.Id });
         }
     }
